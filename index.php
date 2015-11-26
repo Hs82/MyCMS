@@ -15,40 +15,24 @@
     <div class="head">
 
     </div>
-    <div class="navbar">
-    <ul id="menu">
-    	<?php
-    		include("./includes/database.php");
 
-    		$get_cats = "select * from categories";
+    <!-- Navagation Bar start -->
+    <?php include("includes/navbar.php");?>
 
-    		$run_cats = mysql_query($get_cats);
+    <!-- Navagation Bar Ends-->
+    
 
-    		while ($cats_row=mysql_fetch_array($run_cats)){
-    			$cat_id=$cats_row['cat_id'];
-    			$cat_title=$cats_row['cat_title'];
 
-    			echo "
-    			<li><a href='index.php?cat=$cat_id'>$cat_title</a></li>";
+    <!-- Content Area start -->
 
-    		}
+    <?php include("includes/post_content.php");?>
 
-    	?>
-    </ul>
-    <div id="form">
-    	<form method="get" action="results.php" enctype="multipart/form-data">
-    		<input type="text" name="search_query" />
-    		<input type="sumit" name="search" value="Search Now" />
-    	</form>
-    </div>
-    </div>
+    <!-- Content Area ends -->
 
-    <div class="post_area">
-    	this is the Post body</div>
+    <!-- Sidebar start-->
+    <?php include("includes/sidebar.php");?>
+    <!-- Sidebar Ends-->
  
-
-
-    <div id="sidebar">this is the sidebar</div>
 
 
     <div class="footer_area">

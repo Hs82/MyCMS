@@ -47,12 +47,12 @@ td, tr {
 			</tr>
 
 			<tr>
-				<td align="right" <strong>Post Title</strong></td>
+				<td align="right"> <strong>Post Title</strong></td>
 				<td><input type="text" name="post_title" /></td>
 			</tr>
 
 			<tr>
-				<td align="right" <strong>Post Category</strong></td>
+				<td align="right"> <strong>Post Category</strong></td>
 				<td><select name="cat">
 					<option value="null">Select a Category</option>
 					    	<?php
@@ -72,29 +72,29 @@ td, tr {
 
     						?>
 
-    				</sclect>
+    				</select>
 
 
 				</td>
 			</tr>
 
 			<tr>
-				<td align="right" <strong>Post Author</strong></td>
+				<td align="right"> <strong>Post Author</strong></td>
 				<td><input type="text" name="post_author" /></td>
 			</tr>
 
 			<tr>
-				<td align="right" <strong>Post Keywords</strong></td>
+				<td align="right"> <strong>Post Keywords</strong></td>
 				<td><input type="text" name="post_keywords" /></td>
 			</tr>
 
 			<tr>
-				<td align="right" <strong>Post Image</strong></td>
+				<td align="right"> <strong>Post Image</strong></td>
 				<td><input type="file" name="post_image" size="60"/></td>
 			</tr>
 
 			<tr>
-				<td align="right" <strong>Post Content</strong></td>
+				<td align="right"> <strong>Post Content</strong></td>
 				<td><textarea class="ckeditor" cols="80" id="editor1" name="post_content" rows="10"></textarea></td>
 				<!--<td><textarea  name="post_content" cols="80" rows="10"></textarea></td>-->
 			</tr>
@@ -120,7 +120,7 @@ if (isset($_POST['submit'])){
 	 $post_image_tmp = $_FILES['post_image']['tmp_name'];
 	 $post_content = $_POST['post_content'];
 
-	 if ($post_title=='' OR $post_cat=='null' OR $post_author=='' OR $post_keywords=='' OR $post_image=="" OR $post_content="") {
+	 if ($post_title=='' OR $post_cat=='null' OR $post_author=='' OR $post_keywords=='' OR $post_image=="" OR $post_content=='') {
 	 	echo "<script>alert('Please into')</script>";
 	 	exit();
 	 }else {
