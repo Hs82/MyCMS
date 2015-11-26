@@ -23,7 +23,11 @@
     
 
 
+<<<<<<< HEAD
     <!-- Content Area start -->
+=======
+    			echo "<li><a href='index.php?cat=$cat_id'>$cat_title</a></li>";
+>>>>>>> 9276767ed9d7b3d3ffb09e52f0c2523aa48678e3
 
     <?php include("includes/post_content.php");?>
 
