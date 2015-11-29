@@ -1,5 +1,6 @@
 <div class="post_area">
     	<?php
+        include("includes/database.php");
 
             if (isset($_GET['post'])){
 
@@ -32,37 +33,13 @@
             }
 
         }
+        include("includes/comment_form.php");
 
         ?>
-        <div>
-            <h2>Post a Comment</h2>
-    <form method="post" action="details.php?post=<?php echo $post_id; ?>">
-        <table width="730">
-            <tr>
-                <td><strong>Your Name </strong></td>
-                <td><input type="text" name="comment_name" /></td>
-            </tr>
-            <tr>
-                <td><strong>Your Email </strong></td>
-                <td><input type="text" name="comment_email" /></td>
-            </tr>
-            <tr>
-                <td><strong>Your Comment </strong></td>
-                <td><textarea name="comment" cols="25" rows="16"></textarea></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="submit" value="Post Comment" /></td>
-            </tr>
-
-    </form>
-</div>
+    
 
     </div>
 
 
-    <!-- Sidebar start-->
-    <?php include("includes/sidebar.php");?>
-    <!-- Sidebar Ends-->
+  
 
-       <div class="footer_area">
-        this is the footerr</div>
