@@ -1,12 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>hh</title>
+    
+    <link href="./styles/style.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contianer">
+
+    <div class="head">
+
+    </div>
+
+    <!-- Navagation Bar start -->
+    <?php include("navbar.php");?>
+
+    <!-- Navagation Bar Ends-->
+
+
+
+    <!-- Content Area start -->
+
 <div class="post_area">
 
 
-    	<?php
-            if (!isset($_GET['cat'])){
-                $cat_id = $_GET['cat'];
+        <?php
+            if (isset($_GET['search'])){
+
+            $get_query = $_GET['search_query'];
+
+            if($get_query==''){
+                echo "<script>alert('Please write a keyword')</script>";
+                echo "<script>window.open('index.php', '_self')</script>";
+                exit();
+            }
+
+            $get_posts = "select * from posts where post_keywords like '%$get_query%'";
 
 
-            $get_posts = "select * from posts order by rand() LIMIT 0, 5";
+
 
             $run_posts = mysql_query($get_posts);
 
@@ -73,3 +109,19 @@
 
 
     </div>
+    <!-- Content Area ends -->
+
+    <!-- Sidebar start-->
+    <?php include("includes/sidebar.php");?>
+    <!-- Sidebar Ends-->
+ 
+
+
+    <div class="footer_area">
+        this is the footerr</div>
+
+
+
+</div>
+</body>
+</html>

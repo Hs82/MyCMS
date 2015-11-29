@@ -19,9 +19,9 @@
     	?>
     </ul>
     <div id="form">
-    	<form method="get" action="results.php" enctype="multipart/form-data">
+    	<form method="get" action="./results.php" enctype="multipart/form-data">
     		<input type="text" name="search_query" />
-    		<input type="sumit" name="search" value="Search Now" />
+    		<input type="submit" name="search" value="Search Now" />
     	</form>
     </div>
     </div>
